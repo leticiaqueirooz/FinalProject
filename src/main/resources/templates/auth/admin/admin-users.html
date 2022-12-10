@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Users</title>
+
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css/bootstrap.min.css}">
+    <script th:src="@{/jquery-3.6.0-min/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{/bootstrap-5.2.3-dist/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<div th:replace="auth/generic-nav :: genericNav"></div>
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <h1>All Users</h1>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Birthdate</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:if="${ListOfUsers.empty}">
+                    <td colspan="2">No users found!</td>
+                </tr>
+                <tr th:each=" User : ${ListOfUsers}">
+                    <td><span th:text="${User.username}"> Nome </span></td>
+                    <td><span th:text="${User.email}"> Cpf </span></td>
+                    <td><span th:text="${#dates.format(User.birthDate, 'dd/MM/yyyy')}"> Birthdate </span></td>
+                    <td>
+                        <th:block th:each="pp : ${User.Roles}">
+                            <span th:text="${pp.role}"> Roles </span><br/>
+                        </th:block>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger btn-sm"
+                           th:href="@{/user/admin/delete/{id}(id=${User.id})}"
+                           th:data-confirm-delete="|Are you sure that you want to delete ${User.username}?|"
+                           onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">
+                            Delete
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm"
+                           th:href="@{/user/edit/{id}(id=${User.id})}">
+                            Edit
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm"
+                           th:href="@{/user/editRole/{id}(id=${User.id})}">
+                            Roles
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<html lang="en" class="no-js">-->
+<!--<![endif]-->
+
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Page Title -->
+    <title>Cristiane Pinto | Nail Lounge</title>
+    <!-- Meta Description -->
+    <meta name="description" content="My final project" />
+    <meta
+            name="keywords"
+            content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation"
+    />
+    <meta name="author" content="final project" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font -->
+
+    <link
+            href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+            rel="stylesheet"
+            type="text/css"
+    />
+
+
+    <!-- CSS
+            ================================================== -->
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/font-awesome.min.css}">
+    <!-- Twitter Bootstrap css -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/bootstrap.min.css}">
+    <!-- jquery.fancybox  -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/jquery.fancybox.css}">
+    <!-- animate -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/animate.css}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/main.css}">
+    <!-- media-queries -->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css-main/media-queries.css}">
+
+
+
+
+
+    <!-- Modernizer Script for old Browsers -->
+<!--    <script src="js/modernizr-2.6.2.min.js"></script>-->
+    <script th:src="@{/jquery-3.6.0-min/js-main/modernizr-2.6.2.min.js}"></script>
+
+</head>
+
+<body id="body">
+
+<!-- preloader -->
+<!--<div id="preloader">-->
+<!--    <img src="img/preloader.gif" alt="Preloader" />-->
+<!--</div>-->
+<!-- end preloader -->
+
+<!--
+    Fixed Navigation
+    ==================================== -->
+<header id="navigation" class="navbar-fixed-top navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- responsive nav button -->
+            <button
+                    type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse"
+            >
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars fa-2x"></i>
+            </button>
+            <!-- /responsive nav button -->
+
+            <!-- logo -->
+            <a class="navbar-brand" href="#body">
+                <h1 id="logo">
+                    <img src="img/logo1.png" alt="LOGO" height="40px" />
+                </h1>
+            </a>
+            <!-- /logo -->
+        </div>
+
+        <!-- main nav -->
+        <nav class="collapse navbar-collapse navbar-right" role="navigation">
+            <ul id="nav" class="nav navbar-nav">
+                <li class="current"><a href="#body">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Sevices & Booking</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="http://google.com">Login</a></li>
+            </ul>
+        </nav>
+        <!-- /main nav -->
+    </div>
+</header>
+<!--
+    End Fixed Navigation
+    ==================================== -->
+
+<!--
+    Home Slider
+    ==================================== -->
+
+<section id="slider">
+    <div
+            id="carousel-example-generic"
+            class="carousel slide"
+            data-ride="carousel"
+    >
+        <!-- Indicators bullet -->
+        <ol class="carousel-indicators">
+            <li
+                    data-target="#carousel-example-generic"
+                    data-slide-to="0"
+                    class="active"
+            ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        <!-- End Indicators bullet -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <!-- single slide -->
+            <div class="item active" style="background-image: url(img/16.png)">
+                <div class="carousel-caption">
+                    <h2
+                            data-wow-duration="700ms"
+                            data-wow-delay="500ms"
+                            class="wow bounceInDown animated"
+                    >
+                        Cristiane<span> Pinto</span>
+                    </h2>
+                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">
+                        <span class="color">Nail</span> Lounge
+                    </h3>
+                    <p data-wow-duration="1000ms" class="wow slideInRight animated">
+                        "Your nails say everything about you."
+                    </p>
+
+                    <!-- <ul class="social-links text-center">
+                      <li>
+                        <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+                      </li>
+                    </ul> -->
+                </div>
+            </div>
+            <!-- end single slide -->
+
+            <!-- single slide -->
+<!--            <div a href="ststic/img/11.png" ><i class="item"></i></a> </div>-->
+<!--            <div  class="item" style="background-image: href=('/static/img/11.png')">-->
+<!--                ...-->
+<!--            </div>-->
+<!--            <div class="item" th:style="'background-image: url(' + @{/img/11.png} + ')'">-->
+
+            <div th:style="'background: url(/img/11.png) no-repeat center center fixed;'">
+            ...
+            </div>
+
+<!--            <style th:inline="logo">-->
+<!--                body{-->
+<!--                    background: url([[@{/img/11.png}]])-->
+<!--                    no-repeat center center fixed;-->
+<!--                }-->
+<!--            </style>-->
+
+
+
+<!--            <img alt="logo" th:src="@{/img/11.png}"/>-->
+
+
+                <div class="carousel-caption">
+                    <h2
+                            data-wow-duration="500ms"
+                            data-wow-delay="500ms"
+                            class="wow bounceInDown animated"
+                    >
+                        Join our<span> Team</span>!
+                    </h2>
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated">
+                        <span class="color">more information</span> coming soon.
+                    </h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated">
+                        "Being a nail designer goes beyond building nails; it is about
+                        delivering self-esteem and making dreams come true."
+                    </p>
+
+                    <!-- <ul class="social-links text-center">
+                      <li>
+                        <a href=""><i class="fa fa-instagram fa-lg"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-facebook fa-lg"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+                      </li>
+                      <li>
+                        <a href=""><i class="fa fa-dribbble fa-lg"></i></a>
+                      </li>
+                    </ul> -->
+                </div>
+            </div>
+            <!-- end single slide -->
+        </div>
+
+</section>
+
+<!--
+    End Home SliderEnd
+    ==================================== -->
+
+<!--
+    About
+    ==================================== -->
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div
+                    class="sec-title text-center mb50 wow bounceInDown animated"
+                    data-wow-duration="500ms"
+            >
+                <h2>About</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <!-- service item -->
+            <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <!-- <i class="fa fa-github fa-2x"></i> -->
+                        <i class="fa fa-heart fa-2x"></i>
+                    </div>
+
+                    <div class="service-desc">
+                        <h3>About Cristiane</h3>
+                        <p>
+                            From Rio de Janeiro and graduated in Business in 2015, I
+                            arrived in Ireland in 2018 like any student seeking the
+                            opportunity for a better and more stable life. In the middle
+                            of the pandemic, I went after an extra income and, to occupy
+                            my free time, discovered the love of making nails. Today,
+                            after two and a half years, I opened my space, where, with
+                            much love, I deliver self-esteem, beauty, and power to the
+                            nails of the amazing women who accompany me.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+
+            <!-- service item -->
+            <div
+                    class="col-md-4 wow fadeInUp"
+                    data-wow-duration="500ms"
+                    data-wow-delay="500ms"
+            >
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-pencil fa-2x"></i>
+                    </div>
+
+                    <div class="service-desc">
+                        <h3>Mission, vision and values</h3>
+                        <p>
+                            Our mission is to provide impeccable and personalized service
+                            through a team of highly skilled.
+                            <br />
+                            It is our vision to be a place of reference where everyone
+                            feels comfortable and welcome. Our goal is that every customer
+                            receives exceptional service from the moment they walk in,
+                            until the moment they leave. <br />
+                            Our values are ethics, safety, and quality in the delivery of
+                            our services, transparency in the results, excellence in every
+                            step, and constant training in search of the best.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+
+            <!-- service item -->
+            <div
+                    class="col-md-4 wow fadeInRight"
+                    data-wow-duration="500ms"
+                    data-wow-delay="900ms"
+            >
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-bullhorn fa-2x"></i>
+                    </div>
+
+                    <div class="service-desc">
+                        <h3>Be a Nail Boss</h3>
+                        <p>
+                            With the goal of expanding all this
+                            love for this universe of nails,
+                            I decided to specialize not only to
+                            build nails, but also to train new
+                            qualified professionals in the area. <br>
+                            Small groups and also individual workshops. <br>
+                            More information soon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end service item -->
+        </div>
+    </div>
+</section>
+
+<!--
+    End about
+    ==================================== -->
+
+<!--
+    Our Works
+    ==================================== -->
+
+<section id="works" class="works clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="sec-title text-center">
+                <h2>Sevices & Booking</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <div class="sec-sub-title text-center">
+                <p>
+                <h3>Cancellation Police</h3>
+                All cancellations must be made 24 hours before 6pm the
+                day before your session. All cancellation requests after
+                this time will be considered as a given session.
+                Please let us know as soon as possible if you are
+                unable to make your appointment. We can easily reschedule it! <br>
+                Communication is the key!
+            </div>
+
+            <div
+                    class="work-filter wow fadeInRight animated"
+                    data-wow-duration="500ms"
+            >
+                <ul class="text-center">
+                    <li>
+                        <a href="javascript:" data-filter="all" class="active filter"
+                        >All</a
+                        >
+                    </li>
+                    <li>
+                        <a href="javascript:" data-filter=".branding" class="filter"
+                        >Shellac</a
+                        >
+                    </li>
+                    <li>
+                        <a href="javascript:" data-filter=".web" class="filter"
+                        >Gel Infill</a
+                        >
+                    </li>
+                    <li>
+                        <a href="javascript:" data-filter=".logo-design" class="filter"
+                        >Gel Extension</a
+                        >
+                    </li>
+                    <li>
+                        <a href="javascript:" data-filter=".photography" class="filter"
+                        >Nails Art</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-wrapper">
+        <figure class="mix work-item branding">
+            <img src="img/works/item-1.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-1.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item web">
+            <img src="img/works/item-2.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-2.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item logo-design">
+            <img src="img/works/item-3.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-3.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item photography">
+            <img src="img/works/item-4.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-4.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item branding">
+            <img src="img/works/item-5.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-5.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item web">
+            <img src="img/works/item-6.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-6.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item logo-design">
+            <img src="img/works/item-7.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-7.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item photography">
+            <img src="img/works/item-8.jpg" alt="" />
+            <figcaption class="overlay">
+                <a
+                        class="fancybox"
+                        rel="works"
+                        title="By Cristiane Pinto"
+                        href="img/works/item-8.jpg"
+                ><i class="fa fa-eye fa-lg fa-3x"></i
+                ></a>
+
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<!--
+    End Our Works
+    ==================================== -->
+
+<!--
+    Meet Our Team
+    ==================================== -->
+
+<section id="team" class="team">
+    <div class="container">
+        <div class="row">
+            <div
+                    class="sec-title text-center wow fadeInUp animated"
+                    data-wow-duration="700ms"
+            >
+                <h2>Meet Our Team</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <div
+                    class="sec-sub-title text-center wow fadeInRight animated"
+                    data-wow-duration="500ms"
+            >
+                <p>
+                    Behind the scenes, we are working together and taking
+                    care of every detail for your unique and unforgettable experience.
+                </p>
+            </div>
+
+            <!-- single member -->
+            <figure
+                    class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                    data-wow-duration="500ms"
+            >
+                <div class="member-thumb">
+                    <img
+                            src="img/team/19.png"
+                            alt="Team Member"
+                            class="img-responsive"
+                    />
+                    <figcaption class="overlay">
+                        <h5>Nice to meet you!</h5>
+                        <p>Follow me on Instagram</p>
+                        <ul class="social-links text-center">
+                            <li>
+                                <a href="https://www.instagram.com/cristianepinto_naillounge/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            </li>
+
+                        </ul>
+                    </figcaption>
+                </div>
+                <h4>Cristiane Pinto</h4>
+                <span>Owner and Nail Designer</span>
+            </figure>
+            <!-- end single member -->
+
+            <!-- single member -->
+            <figure
+                    class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                    data-wow-duration="500ms"
+                    data-wow-delay="300ms"
+            >
+                <div class="member-thumb">
+                    <img
+                            src="img/team/18.png"
+                            alt="Team Member"
+                            class="img-responsive"
+                    />
+                    <figcaption class="overlay">
+                        <h5>Nice to meet you!</h5>
+                        <p>Follow me on Instagram</p>
+                        <ul class="social-links text-center">
+                            <li>
+                                <a href="https://www.instagram.com/pdiniznails/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            </li>
+
+                        </ul>
+                    </figcaption>
+                </div>
+                <h4>Priscila Diniz</h4>
+                <span>Nail Designer Treinee</span>
+            </figure>
+            <!-- end single member -->
+
+            <!-- single member -->
+            <figure
+                    class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                    data-wow-duration="500ms"
+                    data-wow-delay="600ms"
+            >
+                <div class="member-thumb">
+                    <img
+                            src="img/team/member-2.png"
+                            alt="Team Member"
+                            class="img-responsive"
+                    />
+                    <figcaption class="overlay">
+                        <h5>Nice to meet you!</h5>
+                        <p>Follow me on Instagram</p>
+                        <ul class="social-links text-center">
+                            <li>
+                                <a href="https://www.instagram.com/souzac.j/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            </li>
+
+                        </ul>
+                    </figcaption>
+                </div>
+                <h4>Jana Souza</h4>
+                <span>Booking Manager</span>
+            </figure>
+            <!-- end single member -->
+
+            <!-- single member -->
+            <figure
+                    class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                    data-wow-duration="500ms"
+                    data-wow-delay="900ms"
+            >
+                <div class="member-thumb">
+                    <img
+                            src="img/team/member-1.png"
+                            alt="Team Member"
+                            class="img-responsive"
+                    />
+                    <figcaption class="overlay">
+                        <h5>Nice to meet you!</h5>
+                        <p>Follow me on Instagram</p>
+                        <ul class="social-links text-center">
+                            <li>
+                                <a href="https://www.instagram.com/leticiaqueirooz/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                            </li>
+                        </ul>
+                    </figcaption>
+                </div>
+                <h4>Letícia Queiroz</h4>
+                <span>Web Developer</span>
+            </figure>
+            <!-- end single member -->
+        </div>
+    </div>
+</section>
+
+<!--
+    End Meet Our Team
+    ==================================== -->
+
+<!--
+    Some fun facts
+    ==================================== -->
+
+<section id="facts" class="facts">
+    <div class="parallax-overlay">
+        <div class="container">
+            <div class="row number-counters">
+                <div
+                        class="sec-title text-center mb50 wow rubberBand animated"
+                        data-wow-duration="1000ms"
+                >
+                    <h2>SOME INTERESTING FACTS</h2>
+                    <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                </div>
+
+                <!-- first count item -->
+                <div
+                        class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                        data-wow-duration="500ms"
+                >
+                    <div class="counters-item">
+                        <i class="fa fa-clock-o fa-3x"></i>
+                        <strong data-to="26298">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>Hours of Work</p>
+                    </div>
+                </div>
+                <div
+                        class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                        data-wow-duration="500ms"
+                        data-wow-delay="300ms"
+                >
+                    <div class="counters-item">
+                        <i class="fa fa-users fa-3x"></i>
+                        <strong data-to="445">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>Satisfied Clients</p>
+                    </div>
+                </div>
+                <div
+                        class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                        data-wow-duration="500ms"
+                        data-wow-delay="600ms"
+                >
+                    <div class="counters-item">
+                        <i class="fa fa-rocket fa-3x"></i>
+                        <strong data-to="8">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>Projects in Progress</p>
+                    </div>
+                </div>
+                <div
+                        class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+                        data-wow-duration="500ms"
+                        data-wow-delay="900ms"
+                >
+                    <div class="counters-item">
+                        <i class="fa fa-trophy fa-3x"></i>
+                        <strong data-to="7">0</strong>
+                        <!-- Set Your Number here. i,e. data-to="56" -->
+                        <p>Certificates until today</p>
+                    </div>
+                </div>
+                <!-- end first count item -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+    End Some fun facts
+    ==================================== -->
+
+<!--
+    Contact Us
+    ==================================== -->
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row mb50">
+            <div
+                    class="sec-title text-center mb50 wow fadeInDown animated"
+                    data-wow-duration="500ms"
+            >
+                <h2>Don't Miss Out</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
+
+            <div
+                    class="sec-sub-title text-center wow rubberBand animated"
+                    data-wow-duration="1000ms"
+            >
+                <p>
+                    - Be a Nail Boss -<br> Be the owner of your future and guarantee your
+                    place in my next courses.
+                </p>
+            </div>
+
+            <!-- contact address -->
+            <div
+                    class="col-lg-3 col-md-3 col-xs-12 wow fadeInLeft animated"
+                    data-wow-duration="500ms"
+            >
+                <div class="contact-address">
+                    <h3>Come visit us!</h3>
+                    <p>9 Wellington Quay, Temple Bar</p>
+                    <p>Dublin - Ireland</p>
+                </div>
+            </div>
+            <!-- end contact address -->
+
+            <!-- contact form -->
+            <div
+                    class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated"
+                    data-wow-duration="500ms"
+                    data-wow-delay="300ms"
+            >
+                <div class="contact-form">
+                    <h3>Subscribe for more information!</h3>
+                    <form action="#" id="contact-form">
+                        <div class="input-group name-email">
+                            <div class="input-field">
+                                <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Name"
+                                        class="form-control"
+                                />
+                            </div>
+                            <div class="input-field">
+                                <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Email"
+                                        class="form-control"
+                                />
+                            </div>
+                        </div>
+                        <div class="input-group">
+                  <textarea
+                          name="message"
+                          id="message"
+                          placeholder="Message"
+                          class="form-control"
+                  ></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input
+                                    type="submit"
+                                    id="form-submit"
+                                    class="pull-right"
+                                    value="Send message"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end contact form -->
+
+            <!-- footer social links -->
+            <div
+                    class="col-xs-12 wow fadeInRight animated"
+                    data-wow-duration="500ms"
+                    data-wow-delay="600ms"
+            >
+                <ul class="footer-social">
+
+                    <li>
+                        <a href="https://www.instagram.com/cristianepinto_naillounge/"
+                        ><i class="fa fa-instagram fa-4x"></i
+                        ></a>
+                        <p>Follow us on Instagram!</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- end footer social links -->
+        </div>
+    </div>
+
+    <!-- Google map -->
+    <div
+            id="map_canvas"
+            class="wow bounceInDown animated"
+            data-wow-duration="500ms"
+    ></div>
+    <!-- End Google map -->
+</section>
+
+<!--
+    End Contact Us
+    ==================================== -->
+
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="col-md-12">
+            <div
+                    class="container wow fadeInUp animated"
+                    data-wow-duration="500ms"
+            >
+                <!-- <div class="footer-single">
+                  <img src="img/logo-footer.png" alt="" height="250px"/>
+
+                </div> -->
+            </div>
+
+            <!-- <div
+              class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
+              data-wow-duration="500ms"
+              data-wow-delay="300ms"
+            >
+              <div class="footer-single">
+                <h6>Subscribe</h6>
+                <form action="#" class="subscribe">
+                  <input type="text" name="subscribe" id="subscribe" />
+                  <input type="submit" value="&#8594;" id="subs" />
+                </form>
+                <p>eusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div> -->
+
+            <!-- <div
+              class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
+              data-wow-duration="500ms"
+              data-wow-delay="600ms"
+            > -->
+            <!-- <div class="footer-single">
+              <h6>Explore</h6>
+              <ul>
+                <li><a href="#">Inside Us</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">Forum</a></li>
+              </ul>
+            </div>
+          </div> -->
+
+            <!-- <div
+              class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
+              data-wow-duration="500ms"
+              data-wow-delay="900ms"
+            > -->
+            <!-- <div class="footer-single">
+              <h6>Support</h6>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Market Blog</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Pressroom</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+            <!-- <div class="row">
+              <div class="col-md-12">
+                <p class="copyright text-center">
+                  Copyright © 2015. All rights
+                  reserved. Designed & developed by
+                  <a href="http://instagra.com/leticiaqueirooz">Letícia Queiroz</a>
+                </p>
+              </div>
+            </div> -->
+        </div>
+    </div>
+</footer>
+
+<a href="javascript:void(0);" id="back-top"
+><i class="fa fa-angle-up fa-3x"></i
+></a>
+
+<!-- Essential jQuery Plugins
+    ================================================== -->
+<!-- Main jQuery -->
+<!--<script src="js/jquery-1.11.1.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery-1.11.1.min.js}"></script>
+
+
+<!-- Single Page Nav -->
+<!--<script src="js/jquery.singlePageNav.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.singlePageNav.min.js}"></script>
+
+
+<!-- Twitter Bootstrap -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/bootstrap.min.js}"></script>
+
+
+<!-- jquery.fancybox.pack -->
+<!--<script src="js/jquery.fancybox.pack.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.fancybox.pack.js}"></script>
+
+
+<!-- jquery.mixitup.min -->
+<!--<script src="js/jquery.mixitup.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.mixitup.min.js}"></script>
+
+<!-- jquery.parallax -->
+<!--<script src="js/jquery.parallax-1.1.3.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.parallax-1.1.3.js}"></script>
+
+<!-- jquery.countTo -->
+<!--<script src="js/jquery-countTo.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery-countTo.js}"></script>
+
+<!-- jquery.appear -->
+<!--<script src="js/jquery.appear.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.appear.js}"></script>
+
+
+
+
+
+
+<!-- Contact form validation -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+
+
+
+
+
+
+<!-- Google Map -->
+<script
+        type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?sensor=false"
+></script>
+<!-- jquery easing -->
+<!--<script src="js/jquery.easing.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/jquery.easing.min.js}"></script>
+
+<!-- jquery easing -->
+<!--<script src="js/wow.min.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/wow.min.js}"></script>
+
+<script>
+    var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animated", // animation css class (default is animated)
+        offset: 120, // distance to the element when triggering the animation (default is 0)
+        mobile: false, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+    });
+    wow.init();
+</script>
+<!-- Custom Functions -->
+<!--<script src="js/custom.js"></script>-->
+<script th:src="@{/jquery-3.6.0-min/js-main/custom.js}"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        /* ========================================================================= */
+        /*	Contact Form
+            /* ========================================================================= */
+
+        $("#contact-form").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                message: {
+                    required: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: "come on, you have a name don't you?",
+                    minlength: "your name must consist of at least 2 characters",
+                },
+                email: {
+                    required: "no email, no message",
+                },
+                message: {
+                    required:
+                        "um...yea, you have to write something to send this form.",
+                    minlength: "thats all? really?",
+                },
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    data: $(form).serialize(),
+                    url: "process.php",
+                    success: function () {
+                        $("#contact-form :input").attr("disabled", "disabled");
+                        $("#contact-form").fadeTo("slow", 0.15, function () {
+                            $(this).find(":input").attr("disabled", "disabled");
+                            $(this).find("label").css("cursor", "default");
+                            $("#success").fadeIn();
+                        });
+                    },
+                    error: function () {
+                        $("#contact-form").fadeTo("slow", 0.15, function () {
+                            $("#error").fadeIn();
+                        });
+                    },
+                });
+            },
+        });
+    });
+</script>
+</body>
+</html>
