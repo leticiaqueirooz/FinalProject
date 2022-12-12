@@ -493,8 +493,19 @@ body > section,
 	Some fun facts
 ==========================================*/
 
+.parallax-overlay{
+
+  background-image: url("../../img/parallax/city.jpg");
+  background-color: rgba(6, 32, 51, 0.8);
+  overflow: scroll;
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
 #facts {
-  background-image: url("../img/parallax/city.jpg");
+  background-image: url("/static/img/parallax/city.jpg");
   background-color: rgba(6, 32, 51, 0.8);
   background-attachment: fixed !important;
   background-position: center center;

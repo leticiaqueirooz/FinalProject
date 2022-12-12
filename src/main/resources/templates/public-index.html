@@ -12,14 +12,23 @@
     <meta charset="utf-8" />
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="stylesapis/map.css">
+
+
     <!-- Page Title -->
     <title>Cristiane Pinto | Nail Lounge</title>
     <!-- Meta Description -->
     <meta name="description" content="My final project" />
-    <meta
-            name="keywords"
-            content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation"
-    />
+    <meta name="keywords"  content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation"/>
     <meta name="author" content="final project" />
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,16 +63,16 @@
 
     <!-- Modernizer Script for old Browsers -->
 <!--    <script src="js/modernizr-2.6.2.min.js"></script>-->
-    <script th:src="@{/jquery-3.6.0-min/js-main/modernizr-2.6.2.min.js}"></script>
-
+    <script th:src="@{/jquery/js-main/modernizr-2.6.2.min.js}"></script>
+        
 </head>
 
 <body id="body">
 
 <!-- preloader -->
-<!--<div id="preloader">-->
-<!--    <img src="img/preloader.gif" alt="Preloader" />-->
-<!--</div>-->
+<div id="preloader">
+    <img src="img/preloader.gif" alt="Preloader" />
+</div>
 <!-- end preloader -->
 
 <!--
@@ -96,11 +105,13 @@
         <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
+               
                 <li class="current"><a href="#body">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#works">Sevices & Booking</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="http:/user/admin/login">Login</a></li>
+                <li style="margin: 0 20px 0 20px; color: #fff;">  <div class="city">Dublin, IE</div><div class="low-high">-1°c / 2°c</div></li>
             </ul>
         </nav>
         <!-- /main nav -->
@@ -136,11 +147,7 @@
             <!-- single slide -->
             <div class="item active" style="background-image: url(img/16.png)">
                 <div class="carousel-caption">
-                    <h2
-                            data-wow-duration="700ms"
-                            data-wow-delay="500ms"
-                            class="wow bounceInDown animated"
-                    >
+                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">
                         Cristiane<span> Pinto</span>
                     </h2>
                     <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">
@@ -150,70 +157,21 @@
                         "Your nails say everything about you."
                     </p>
 
-                    <!-- <ul class="social-links text-center">
-                      <li>
-                        <a href=""><i class="fa fa-twitter fa-lg"></i></a>
-                      </li>
-                    </ul> -->
+
                 </div>
             </div>
             <!-- end single slide -->
 
             <!-- single slide -->
-<!--            <div a href="ststic/img/11.png" ><i class="item"></i></a> </div>-->
-<!--            <div  class="item" style="background-image: href=('/static/img/11.png')">-->
-<!--                ...-->
-<!--            </div>-->
-<!--            <div class="item" th:style="'background-image: url(' + @{/img/11.png} + ')'">-->
+
 
             <div th:style="'background: url(/img/11.png) no-repeat center center fixed;'">
             ...
             </div>
 
-<!--            <style th:inline="logo">-->
-<!--                body{-->
-<!--                    background: url([[@{/img/11.png}]])-->
-<!--                    no-repeat center center fixed;-->
-<!--                }-->
-<!--            </style>-->
 
 
-
-<!--            <img alt="logo" th:src="@{/img/11.png}"/>-->
-
-
-                <div class="carousel-caption">
-                    <h2
-                            data-wow-duration="500ms"
-                            data-wow-delay="500ms"
-                            class="wow bounceInDown animated"
-                    >
-                        Join our<span> Team</span>!
-                    </h2>
-                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated">
-                        <span class="color">more information</span> coming soon.
-                    </h3>
-                    <p data-wow-duration="500ms" class="wow slideInRight animated">
-                        "Being a nail designer goes beyond building nails; it is about
-                        delivering self-esteem and making dreams come true."
-                    </p>
-
-                    <!-- <ul class="social-links text-center">
-                      <li>
-                        <a href=""><i class="fa fa-instagram fa-lg"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="fa fa-facebook fa-lg"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="fa fa-dribbble fa-lg"></i></a>
-                      </li>
-                    </ul> -->
-                </div>
-            </div>
+                          </div>
             <!-- end single slide -->
         </div>
 
@@ -338,8 +296,10 @@
                 <h2>Sevices & Booking</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
+            <br><br>
 
-
+            <li><a href="http:/user/admin/login">Sign Up for Booking your appointment</a></li>
+            <br>
 
             <style>
                 table {
@@ -715,6 +675,7 @@
     ==================================== -->
 
 <section id="facts" class="facts">
+
     <div class="parallax-overlay">
         <div class="container">
             <div class="row number-counters">
@@ -893,87 +854,44 @@
     </div>
 
     <!-- Google map -->
-    <div
-            id="map_canvas"
-            class="wow bounceInDown animated"
-            data-wow-duration="500ms"
-    ></div>
+    <div id="map"></div>
+
+    
     <!-- End Google map -->
 </section>
+
+
 
 <!--
     End Contact Us
     ==================================== -->
 
-<footer id="footer" class="footer">
+<footer id="footer" class="footer" style="background-color: #000;">
     <div class="container">
         <div class="col-md-12">
             <div
                     class="container wow fadeInUp animated"
                     data-wow-duration="500ms"
             >
-                <!-- <div class="footer-single">
-                  <img src="img/logo-footer.png" alt="" height="250px"/>
 
-                </div> -->
             </div>
 
-            <!-- <div
+          <div
               class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
               data-wow-duration="500ms"
               data-wow-delay="300ms"
             >
-              <div class="footer-single">
-                <h6>Subscribe</h6>
-                <form action="#" class="subscribe">
-                  <input type="text" name="subscribe" id="subscribe" />
-                  <input type="submit" value="&#8594;" id="subs" />
-                </form>
-                <p>eusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-            </div> -->
 
-            <!-- <div
-              class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
-              data-wow-duration="500ms"
-              data-wow-delay="600ms"
-            > -->
-            <!-- <div class="footer-single">
-              <h6>Explore</h6>
-              <ul>
-                <li><a href="#">Inside Us</a></li>
-                <li><a href="#">Flickr</a></li>
-                <li><a href="#">Google</a></li>
-                <li><a href="#">Forum</a></li>
-              </ul>
-            </div>
-          </div> -->
-
-            <!-- <div
-              class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated"
-              data-wow-duration="500ms"
-              data-wow-delay="900ms"
-            > -->
-            <!-- <div class="footer-single">
-              <h6>Support</h6>
-              <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Market Blog</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Pressroom</a></li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
-            <!-- <div class="row">
+         </div> 
+          <div class="row">
               <div class="col-md-12">
                 <p class="copyright text-center">
-                  Copyright © 2015. All rights
+                  Copyright © 2022. All rights
                   reserved. Designed & developed by
                   <a href="http://instagra.com/leticiaqueirooz">Letícia Queiroz</a>
                 </p>
               </div>
-            </div> -->
+            </div> 
         </div>
     </div>
 </footer>
@@ -986,39 +904,39 @@
     ================================================== -->
 <!-- Main jQuery -->
 <!--<script src="js/jquery-1.11.1.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery-1.11.1.min.js}"></script>
+<script th:src="@{/jquery/js-main/jquery-1.11.1.min.js}"></script>
 
 
 <!-- Single Page Nav -->
 <!--<script src="js/jquery.singlePageNav.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.singlePageNav.min.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.singlePageNav.min.js}"></script>
 
 
 <!-- Twitter Bootstrap -->
 <!--<script src="js/bootstrap.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/js-main/bootstrap.min.js}"></script>
 
 
 <!-- jquery.fancybox.pack -->
 <!--<script src="js/jquery.fancybox.pack.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.fancybox.pack.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.fancybox.pack.js}"></script>
 
 
 <!-- jquery.mixitup.min -->
 <!--<script src="js/jquery.mixitup.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.mixitup.min.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.mixitup.min.js}"></script>
 
 <!-- jquery.parallax -->
 <!--<script src="js/jquery.parallax-1.1.3.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.parallax-1.1.3.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.parallax-1.1.3.js}"></script>
 
 <!-- jquery.countTo -->
 <!--<script src="js/jquery-countTo.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery-countTo.js}"></script>
+<script th:src="@{/jquery/js-main/jquery-countTo.js}"></script>
 
 <!-- jquery.appear -->
 <!--<script src="js/jquery.appear.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.appear.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.appear.js}"></script>
 
 
 
@@ -1031,7 +949,8 @@
 
 
 
-
+<!-- api temperature -->
+<script src="/js/script.js"></script>
 
 
 <!-- Google Map -->
@@ -1041,11 +960,11 @@
 ></script>
 <!-- jquery easing -->
 <!--<script src="js/jquery.easing.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/jquery.easing.min.js}"></script>
+<script th:src="@{/jquery/js-main/jquery.easing.min.js}"></script>
 
 <!-- jquery easing -->
 <!--<script src="js/wow.min.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/wow.min.js}"></script>
+<script th:src="@{/jquery/js-main/wow.min.js}"></script>
 
 <script>
     var wow = new WOW({
@@ -1059,7 +978,8 @@
 </script>
 <!-- Custom Functions -->
 <!--<script src="js/custom.js"></script>-->
-<script th:src="@{/jquery-3.6.0-min/js-main/custom.js}"></script>
+<script th:src="@{/jquery/js-main/custom.js}"></script>
+<script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
 
 
 <script type="text/javascript">
@@ -1119,5 +1039,33 @@
         });
     });
 </script>
+
+
+<!-- maps -->
+<script>
+    var map = L.map('map').setView([53.350140,  -6.266155], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker = L.marker([53.350140, -6.266155]).addTo(map);
+
+var circle = L.circle([53.350140, -6.266155], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+
+
+var polygon = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
+]).addTo(map);
+</script>
+
 </body>
 </html>
